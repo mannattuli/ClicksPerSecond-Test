@@ -1,0 +1,40 @@
+body {
+  user-select: none;
+  text-align: center;
+  color: #ffffff;
+  background-color: #18191a;
+  font-family: "Roboto", sans-serif;
+}
+
+.clickPad {
+  width: 600px;
+  height: 300px;
+  cursor: pointer;
+  background-color: #121212;
+  border: 1px solid #000000;
+  transition: 1ms;
+  transition: background-color 0.3s;
+  border-radius: 6px;
+}
+
+.clickPad:hover {
+  background-color: #000000;
+}
+
+.hidden {
+  display: none;
+}
+
+.score {
+  width: 600px;
+  height: 300px;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #121212;
+  border: 1px solid #000000;
+  transition: 1ms;
+  text-align: center;
+  font-size: 70px;
+  transition: background-color 0.3s;
+  border-radius: 6px;
+}
