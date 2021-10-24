@@ -77,3 +77,18 @@ li:hover {
   background-color: #48373d;
   color: #ffffff;
 }
+
+.reset {
+  color: #48373d;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+}
+
+.reset:hover {
+  color: #48373d;
+}
+
+.reset:active {
+  background-color: #83616e;
+}
