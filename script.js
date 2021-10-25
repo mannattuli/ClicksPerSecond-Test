@@ -36,6 +36,7 @@ let bliss = document.querySelector(".bliss");
 let dark = document.querySelector(".dark");
 
 bliss.addEventListener("click", function () {
+  localStorage.setItem("theme", "bliss");
   head.innerHTML = `<meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -52,6 +53,7 @@ bliss.addEventListener("click", function () {
 });
 
 dark.addEventListener("click", function () {
+  localStorage.setItem("theme", "dark");
   head.innerHTML = `   
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -67,3 +69,24 @@ dark.addEventListener("click", function () {
   <link rel="stylesheet" href="style.css" />
   <title>ClicksPerSecond</title>`;
 });
+
+// Check for theme
+let x = localStorage.getItem("theme");
+
+if (x == "dark") {
+  //
+} else if (x == "bliss") {
+  head.innerHTML = `<meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style-bliss.css" />
+  <title>ClicksPerSecond</title>`;
+}
