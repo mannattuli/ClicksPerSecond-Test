@@ -1,0 +1,116 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--color);
+}
+#theme {
+  padding-top: 10px;
+}
+#theme div {
+  cursor: pointer;
+  display: inline;
+  font-weight: 600;
+  color: var(--dark-color);
+  margin-right: 7px;
+  text-decoration: none;
+  transition: all 0.25s ease 0s, transform 0.05s ease 0s;
+}
+#theme div:hover {
+  color: var(--light-color);
+  text-decoration: none;
+}
+#modal {
+  position: absolute;
+  top: 50%;
+  font-weight: 600;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background-color: var(--pad-color);
+  padding: 30px;
+  border-radius: 0.5rem;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(0.5px);
+  z-index: 5;
+}
+#socials {
+  padding-top: 10px;
+}
+#socials a {
+  font-weight: 600;
+  color: var(--dark-color);
+  margin-right: 7px;
+  text-decoration: none;
+  transition: all 0.25s ease 0s, transform 0.05s ease 0s;
+}
+#socials a:hover {
+  color: var(--light-color);
+  text-decoration: none;
+}
+p {
+  font-weight: 600;
+  color: var(--dark-color);
+  margin-right: 7px;
+  text-decoration: none;
+  transition: all 0.25s ease 0s, transform 0.05s ease 0s;
+}
+.hidden {
+  display: none;
+}
+a {
+  color: var(--color);
+}
+a:hover {
+  color: var(--light-color);
+}
+main {
+  text-align: center;
+}
+
+h1 {
+  color: var(--color);
+  text-transform: uppercase;
+  font-size: 4em;
+  font-weight: 100;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+#clickPad {
+  width: 600px;
+  height: 300px;
+  color: #d1d0c5;
+  cursor: pointer;
+  background-color: var(--pad-color);
+  border: 1px solid #000000;
+  transition: 1ms;
+  text-align: center;
+  font-size: 70px;
+  transition: background-color 0.3s;
+  border-radius: 6px;
+}
+#clickPad:active {
+  background-color: var(--active-color);
+}
+.themes {
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.fa-paint-brush {
+  font-size: 14px;
+}
