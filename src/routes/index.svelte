@@ -55,6 +55,9 @@
         },
 		{
 			name: "Bliss"
+		},
+		{
+			name: "sk64"
 		}
     ]
 
@@ -220,15 +223,15 @@
 {/if}
 {#if themeName === 'sk64'}
 <style>
-    :root {
-        --color: #a51313fd;
-        --dark-color: #a51313fd;
-        --light-color:#ffffff;
-        --pad-color: #e045b2;
-        --active-color: #d1d1d1;
-        --bg-color: #0c85aa;
-        --error-color: #da3333;
-        --error-dark-color: #791717;
-    }
+	:root {
+		--color: #a51313fd;
+		--dark-color: #a51313fd;
+		--light-color:#ffffff;
+		--pad-color: #e045b2;
+		--active-color: #d1d1d1;
+		--bg-color: #0c85aa;
+		--error-color: #da3333;
+		--error-dark-color: #791717;
+	}
 </style>
 {/if}
