@@ -147,7 +147,7 @@
 		user-select: none;
 	}
 	#clickPad {
-		z-index: 13330;
+		z-index: 130;
 		position: relative;
 	}
 	:root {
