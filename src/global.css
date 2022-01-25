@@ -119,17 +119,14 @@ h1 {
   font-size: 14px;
 }
 
-/* width
+/* 
 ::-webkit-scrollbar {
   width: 10px;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
   background: var(--light-color);
 }
-
-/* Handle */
-/* ::-webkit-scrollbar-thumb {
+ ::-webkit-scrollbar-thumb {
   background: var(--dark-color);
-} */ */
+} 
+*/
