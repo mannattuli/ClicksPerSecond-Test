@@ -1,8 +1,41 @@
 <script>
     import { slide } from 'svelte/transition';
 	import "../global.css"
+	import { onMount } from 'svelte';
 	// import { themeName } from '../theme'
 	$:themeName = 'Dark'; 
+
+	/* MATRIX CONFETTI START */
+	let characters = ['マ', 'ト', 'リ', 'ッ', 'ク', 'ス'];
+	let confetti = new Array(100).fill()
+		.map((_, i) => {
+			return {
+				character: characters[i % characters.length],
+				x: Math.random() * 100,
+				y: -20 - Math.random() * 100,
+				r: 0.1 + Math.random() * 1
+			};
+		})
+		.sort((a, b) => a.r - b.r);
+
+	onMount(() => {
+		let frame;
+
+		function loop() {
+			frame = requestAnimationFrame(loop);
+
+			confetti = confetti.map(emoji => {
+				emoji.y += 0.7 * emoji.r;
+				if (emoji.y > 120) emoji.y = -20;
+				return emoji;
+			});
+		}
+
+		loop();
+
+		return () => cancelAnimationFrame(frame);
+	});
+	/* MATRIX CONFETTI END */
 
     let themes = [
 		{
@@ -56,7 +89,7 @@
 	<div id="clickPad" on:click|once={timeFunc} on:click={clickHandle}
 	class="center {hide === 'true' ? 'hidden' : ''}"></div>
 	{#if score != 0}
-		<p>{score}</p>
+		<p style="text-align: center">{score}</p>
 	{/if}
 
 	<div id="theme">
@@ -98,7 +131,25 @@
 </svelte:head>
 
 {#if themeName === 'Matrix'}
+{#each confetti as c}
+	<span style="left: {c.x}%; top: {c.y}%; transform: scale({c.r})" class="confetti">{c.character}</span>
+{/each}
 <style>
+	:global(body) {
+		overflow: hidden;
+	}
+	.confetti {
+		color: var(--dark-color)
+	}
+	span {
+		position: absolute;
+		font-size: 5vw;
+		user-select: none;
+	}
+	#clickPad {
+		z-index: 13330;
+		position: relative;
+	}
 	:root {
 		--color: #15ff00;
 		--dark-color: #026602;
